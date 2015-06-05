@@ -69,6 +69,7 @@ describe "Customer Details", type: :feature, js: true do
         end
 
         click_button "Update"
+        click_link "Customer Details"
         expect(find_field("order_bill_address_attributes_state_name").value).to eq("Piaui")
       end
     end
