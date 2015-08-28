@@ -133,6 +133,12 @@ Spree::Core::Engine.add_routes do
       end
     end
 
+    resources :user_addresses, only: [] do
+      collection do
+        get :mine
+      end
+    end
+
     get '/config/money', to: 'config#money'
     get '/config', to: 'config#show'
     put '/classifications', to: 'classifications#update', as: :classifications
